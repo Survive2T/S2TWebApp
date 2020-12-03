@@ -2,3 +2,55 @@ body {
   background-color: black;
   color: white;
 }
+img {
+  width: 100%;
+
+  z-index: 1;
+}
+h2 {
+  color: black;
+  border-bottom: 2px black solid;
+}
+p {
+  font-size: 16px;
+}
+
+@media (min-width: 950px) {
+  img {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+  .Content {
+    width: 70%;
+    grid-template-rows: 20% 15% 45% 20%;
+    grid-template-columns: 40% 60%;
+  }
+}
+@media (max-width: 950px) {
+  .Content {
+    width: 100%;
+    grid-template-rows: 40% 15% 45%;
+    grid-template-columns: 100%;
+  }
+}
+
+.Content {
+  margin: auto;
+  display: grid;
+  align-items: center;
+  justify-items: stretch;
+  padding-top: 128px;
+}
+.Subject {
+  border: 2px black solid;
+  margin: 0;
+  background-color: #a7d129;
+  color: #3e432e;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  z-index: 2;
+}
