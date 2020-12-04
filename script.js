@@ -14,13 +14,28 @@ content.appendChild(caption);
 caption.appendChild(subject);
 caption.appendChild(description);
 
-window.onload = function () {
+let background = document.getElementById("background");
+let container = document.getElementById("Main-Content");
+
+let UpdateBackgroundSize = function () {
+  let w = window.innerWidth;
+  let h = window.innerHeight;
+  if (w / h < 1.9125) {
+    background.style.backgroundSize = "auto 100%";
+  } else {
+    background.style.backgroundSize = "100% auto";
+  }
+};
+
+window.addEventListener("resize", UpdateBackgroundSize);
+window.addEventListener("load", (event) => {
+  UpdateBackgroundSize();
   let i = 0;
-  let container = document.getElementById("Main-Content");
-  for (i = 0; 0 < posts.length; i++) {
+  posts.forEach((element) => {
     screenshot.src = posts[i].mImage;
     subject.innerHTML = posts[i].mSubject;
     description.innerHTML = posts[i].mDescription;
     container.appendChild(content.cloneNode(true));
-  }
-};
+    i++;
+  });
+});
