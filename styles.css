@@ -1,18 +1,13 @@
+header {
+  background-color: white;
+  color: black;
+}
 body {
   background-color: black;
   color: white;
 }
 img {
   width: 100%;
-
-  z-index: 1;
-}
-h2 {
-  color: black;
-  border-bottom: 2px black solid;
-}
-p {
-  font-size: 16px;
 }
 
 @media (min-width: 950px) {
@@ -41,16 +36,20 @@ p {
   display: grid;
   align-items: center;
   justify-items: stretch;
-  padding-top: 128px;
+  margin-top: 128px;
+  border: 2px #3e432e solid;
 }
-.Subject {
-  border: 2px black solid;
+
+.Caption {
   margin: 0;
-  background-color: #a7d129;
-  color: #3e432e;
+  background-color: black;
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 4;
-  z-index: 2;
+}
+
+.Caption:hover {
+  border: 2px #a7d129 solid;
+  box-shadow: 0 0 10px #3e432e;
 }
