@@ -11,22 +11,15 @@ footer {
   background-color: #282e39;
   padding: 5em;
 }
+footer img {
+  height: 32px;
+}
 
-img {
+.Content img {
   width: 100%;
 }
 a {
   display: block;
-}
-iframe {
-  width: 100%;
-  display: block;
-  height: 192px;
-  border: none;
-}
-
-footer img {
-  height: 32px;
 }
 
 .Content {
@@ -38,7 +31,6 @@ footer img {
   margin-bottom: 64px;
   border: 3px #2d3139 solid;
 }
-
 .Caption {
   background-color: #282e39;
   border: 3px #2d3139 solid;
@@ -48,7 +40,6 @@ footer img {
   grid-row-start: 2;
   grid-row-end: 3;
 }
-
 .Content:hover {
   border: 3px #a7d129 solid;
   box-shadow: 0 0 10px #3e432e;
@@ -73,4 +64,28 @@ footer img {
     grid-template-rows: auto auto;
     grid-template-columns: 100%;
   }
+}
+
+.Container {
+  position: relative;
+}
+
+.CountDownWidget {
+  background-color: green;
+  font-size: x-large;
+  position: absolute;
+  margin: 0;
+  padding: 0.5em;
+  bottom: -1em;
+  right: 2em;
+}
+
+#Header {
+  background-color: #282e39;
+}
+#Header img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 250px;
 }
